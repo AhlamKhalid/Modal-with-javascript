@@ -15,6 +15,7 @@ body {
   --secondary-color: #b5b5b5;
   --font-base: 16px;
   --font-sm: 14px;
+  --font-family: "Poppins", sans-serif;
 }
 
 .uppercase {
