@@ -14,14 +14,59 @@
       rel="stylesheet"
     />
   </head>
-  <body class="flex justify-center align-center">
-    <div class="item-container">
-      <img class="item-img" src="./img/img.jpg" alt="vase picture" />
-      <div class="item-info">
-        <p class="item-category">home decor</p>
-        <div class="flex justify-between">
-          <p class="item-name">Beige vase</p>
-          <p class="item-price">15 sar</p>
+  <body>
+    <!-- blur effect -->
+    <div
+      id="blur-container"
+      class="blur-container flex justify-center align-center"
+    >
+      <!-- item -->
+      <div class="item-container">
+        <img
+          id="item-img"
+          class="item-img"
+          src="./img/img.jpg"
+          alt="vase picture"
+        />
+        <div class="item-info">
+          <p class="item-category">home decor</p>
+          <div class="flex justify-between">
+            <p>Beige vase</p>
+            <p class="item-price">15 sar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <div id="modal-container" class="modal-container">
+      <div class="modal">
+        <!-- close -->
+        <div class="close-container">
+          <button id="close-btn" class="close-btn">
+            <img src="./img/close.svg" alt="close icon" />
+          </button>
+        </div>
+        <!-- content -->
+        <div class="modal-content">
+          <img class="item-img" src="./img/img.jpg" alt="vase picture" />
+          <div class="content-container">
+            <p class="item-category">home decor</p>
+            <div class="flex justify-between">
+              <p>Beige vase</p>
+              <p class="item-price">15 sar</p>
+            </div>
+            <div class="item-details">
+              <p><span class="secondary-color">Size: </span>50cm x 65cm</p>
+              <p><span class="secondary-color">Composition: </span>glass</p>
+              <p><span class="secondary-color">Color: </span>beige</p>
+            </div>
+            <div class="quantity-container flex justify-between align-center">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+            <button class="add-btn">add to cart</button>
+          </div>
         </div>
       </div>
     </div>

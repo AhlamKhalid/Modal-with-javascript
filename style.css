@@ -11,10 +11,10 @@
   --font-sm: 14px;
   --font-base: 16px;
   --font-family: "Poppins", sans-serif;
-  --margin-sm: 8px;
-  --margin-base: 16px;
-  --margin-lg: 24px;
-  --margin-xl: 32px;
+  --space-sm: 8px;
+  --space-base: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
 }
 
 html,
@@ -28,6 +28,13 @@ body {
 
 img {
   max-width: 100%;
+}
+
+button {
+  border: none;
+  background-color: initial;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 /* utility classes */
@@ -47,13 +54,29 @@ img {
   align-items: center;
 }
 
+.secondary-color {
+  color: var(--secondary-color);
+}
+
 /* item */
+.blur-container {
+  min-height: 100vh;
+}
+
+.blur-container.blur {
+  filter: blur(5px);
+}
+
 .item-container {
-  max-width: 268px;
+  width: 268px;
+}
+
+.item-container .item-img {
+  cursor: pointer;
 }
 
 .item-info {
-  margin-top: var(--margin-base);
+  margin-top: var(--space-base);
 }
 
 .item-category {
@@ -65,4 +88,87 @@ img {
 
 .item-price {
   text-transform: uppercase;
+}
+
+/* modal */
+.modal-container {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(181, 181, 181, 0.2);
+}
+
+.modal-container.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 700px;
+}
+
+.close-container {
+  text-align: right;
+}
+
+.close-btn {
+  background-color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+}
+
+.modal-content {
+  height: 380px;
+  display: flex;
+}
+
+.modal-content .item-img {
+  width: 300px;
+  object-fit: cover;
+}
+
+.content-container {
+  flex-grow: 1;
+  /* flex-basis: 100%; */
+  background-color: #fff;
+  padding: var(--space-lg);
+}
+
+.item-details {
+  margin: var(--space-xl) 0;
+}
+
+.item-details * {
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-sm);
+}
+
+/* get last child of .item-details  */
+.item-details > *:last-child {
+  margin-bottom: 0;
+}
+
+.quantity-container {
+  border: 1px solid var(--primary-color);
+}
+
+.quantity-container button {
+  width: 40px;
+  height: 40px;
+  font-size: var(--font-base);
+}
+
+.add-btn {
+  margin-top: var(--space-base);
+  background-color: var(--primary-color);
+  color: #fff;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: var(--font-base);
+  padding: var(--space-sm);
 }
